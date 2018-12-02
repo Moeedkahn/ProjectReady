@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
     TabLayout.Tab Wishlist;
     TabLayout.Tab Cart;
     TabLayout.Tab Contact;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -116,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
        /* mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));*/
 

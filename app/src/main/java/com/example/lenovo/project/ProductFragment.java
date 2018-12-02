@@ -50,11 +50,8 @@ public class ProductFragment extends Fragment {
             }
         });
         return view;
-
-
     }
     public void updateDetail(int i) {
-
         Intent intent=new Intent(getActivity(),Detail.class);
         Toast.makeText(getContext(),"Moving",Toast.LENGTH_LONG).show();
         String name=ShirtList.get(i).name;

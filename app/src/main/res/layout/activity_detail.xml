@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/detailNAME" />
+        android:id="@+id/detailNAME"
+        android:layout_marginTop="10dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,6 +29,13 @@
             android:layout_marginTop="8dp"
             android:text="Price:"
             android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:paddingBottom="16dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/detailPrice"/>
         <Spinner
             android:id="@+id/size_spinner"
             android:layout_width="100dp"
@@ -37,13 +45,7 @@
             android:background="#FFFFFF"/>
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:paddingBottom="16dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/detailPrice"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
