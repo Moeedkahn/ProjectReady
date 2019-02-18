@@ -1,5 +1,8 @@
 package com.example.lenovo.project;
 
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -36,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
     private TabLayout mTablayout;
+    private ConnectivityReciever cr;
+
     TabLayout.Tab Product;
     TabLayout.Tab Wishlist;
     TabLayout.Tab Cart;
@@ -209,5 +214,19 @@ public class MainActivity extends AppCompatActivity {
             // Show 3 total pages.
             return 4;
         }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        cr = new ConnectivityReciever();
+        IntentFilter i = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        registerReceiver(cr, i);
+    }
+
+    @Override
+    protected void onStop() {
+        unregisterReceiver(cr);
+        super.onStop();
     }
 }
